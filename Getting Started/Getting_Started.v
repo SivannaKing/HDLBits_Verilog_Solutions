@@ -1,6 +1,6 @@
 module top_module (
-    output one
-);
+        output one
+    );
 
     assign one = 1'b1;
 

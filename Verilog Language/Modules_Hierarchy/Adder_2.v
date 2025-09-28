@@ -2,7 +2,7 @@ module top_module (
     input  [31:0] a,
     input  [31:0] b,
     output [31:0] sum
-);  //
+    );  //
 
     wire c1, c2;
     add16 u_add16_00 (
@@ -28,7 +28,7 @@ module add1 (
     input  cin,
     output sum,
     output cout
-);
+    );
 
     // Full adder module here
     assign {cout, sum} = a + b + cin;

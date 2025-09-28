@@ -1,14 +1,14 @@
 module top_module (
-    input  [7:0] in,
-    output [7:0] out
-);
+    input [7: 0] in,
+    output [7: 0] out
+    );
 
     assign out = {in[0], in[1], in[2], in[3], in[4], in[5], in[6], in[7]};
 
 endmodule
 /*
 // I know you're dying to know how to use a loop to do this:
-
+ 
 // Create a combinational always block. This creates combinational logic that computes the same result
 // as sequential code. for-loops describe circuit *behaviour*, not *structure*, so they can only be used 
 // inside procedural blocks (e.g., always block).
@@ -20,8 +20,8 @@ always @(*) begin
     for (int i=0; i<8; i++)	// int is a SystemVerilog type. Use integer for pure Verilog.
         out[i] = in[8-i-1];
 end
-
-
+ 
+ 
 // It is also possible to do this with a generate-for loop. Generate loops look like procedural for loops,
 // but are quite different in concept, and not easy to understand. Generate loops are used to make instantiations
 // of "things" (Unlike procedural loops, it doesn't describe actions). These "things" are assign statements,

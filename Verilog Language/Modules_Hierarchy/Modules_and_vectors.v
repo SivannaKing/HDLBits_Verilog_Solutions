@@ -3,7 +3,7 @@ module top_module (
     input  [7:0] d,
     input  [1:0] sel,
     output [7:0] q
-);
+    );
 
     wire [7:0] q1, q2, q3;
     my_dff8 u_my_dff_00 (
@@ -24,11 +24,18 @@ module top_module (
 
     always @(*) begin
         case (sel)
-            2'b00:   q <= d;
-            2'b01:   q <= q1;
-            2'b10:   q <= q2;
-            2'b11:   q <= q3;
-            default: q <= d;
+            2'b00:
+                q <= d;
+            2'b01:
+                q <= q1;
+            2'b10:
+                q <= q2;
+            2'b11:
+                q <= q3;
+            default:
+                q <= d;
         endcase
     end
+
+
 endmodule

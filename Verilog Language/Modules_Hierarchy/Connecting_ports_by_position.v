@@ -5,7 +5,7 @@ module top_module (
     input  d,
     output out1,
     output out2
-);
+    );
 
     mod_a u_mod_a (
         out1,

@@ -2,7 +2,7 @@ module top_module (
     input  [31:0] a,
     input  [31:0] b,
     output [31:0] sum
-);
+    );
 
     wire c0, c1, c2;
     wire [15:0] sum1, sum2;
@@ -27,5 +27,7 @@ module top_module (
         sum2,
         c2
     );
-    assign sum[31:16] = c0 ? sum2 : sum1;
+
+    assign sum[31: 16] = c0 ? sum2 : sum1;
+    
 endmodule

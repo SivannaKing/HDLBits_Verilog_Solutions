@@ -1,13 +1,13 @@
 module top_module (
     input  [254:0] in,
-    output [  7:0] out
-);
+    output [7:0] out
+    );
 
-    always @(*) begin
-        integer i;  // TODO IMP define integer in first line/outside
+    integer i;  // Moved outside always block for Verilog-2001 compliance
+    always @( * ) begin
         out = 8'h0;
-        for (i = 0; i < $bits(in); i++) begin
-            out = out + in[i];  // TODO IMP different bit width plus 
+        for (i = 0; i < $bits(in); i + + ) begin
+            out = out + in[i];  // TODO IMP different bit width plus
         end
     end
 

@@ -2,7 +2,7 @@ module top_module (
     input  clk,
     input  d,
     output q
-);
+    );
 
     wire q1, q2;
     my_dff u_my_dff_00 (
@@ -20,4 +20,5 @@ module top_module (
         q2,
         q
     );
+
 endmodule

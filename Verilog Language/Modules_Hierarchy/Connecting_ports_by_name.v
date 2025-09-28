@@ -5,7 +5,7 @@ module top_module (
     input  d,
     output out1,
     output out2
-);
+    );
 
     mod_a u_mod_a (
         .in1 (a),
@@ -15,4 +15,5 @@ module top_module (
         .out1(out1),
         .out2(out2)
     );
+
 endmodule

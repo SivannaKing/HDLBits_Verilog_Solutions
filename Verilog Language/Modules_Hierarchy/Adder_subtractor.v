@@ -3,7 +3,7 @@ module top_module (
     input  [31:0] b,
     input         sub,
     output [31:0] sum
-);
+    );
 
     wire [31:0] comp_b;
     assign comp_b = {32{sub}} ^ b;  // TODO IMP same bit wise
@@ -23,4 +23,5 @@ module top_module (
         sum[31:16],
         c2
     );
+          
 endmodule

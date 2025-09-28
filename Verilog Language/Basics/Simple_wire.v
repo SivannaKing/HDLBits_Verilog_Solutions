@@ -1,7 +1,7 @@
 module top_module (
-    input  in,
+    input in,
     output out
-);
+    );
 
     assign out = in;
 
