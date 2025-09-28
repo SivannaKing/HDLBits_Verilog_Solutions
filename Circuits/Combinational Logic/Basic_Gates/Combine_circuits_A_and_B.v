@@ -1,0 +1,50 @@
+module top_module (
+    input  x,
+    input  y,
+    output z
+);
+
+    wire z1, z2, z3, z4;
+    A u_IA1 (
+        x,
+        y,
+        z1
+    );
+    A u_IA2 (
+        x,
+        y,
+        z3
+    );
+    B u_IB1 (
+        x,
+        y,
+        z2
+    );
+    B u_IB2 (
+        x,
+        y,
+        z4
+    );
+    assign z = (z1 | z2) ^ (z3 & z4);
+
+endmodule
+
+module A (
+    input  x,
+    input  y,
+    output z
+);
+
+    assign z = (x ^ y) & x;
+
+endmodule
+
+module B (
+    input  x,
+    input  y,
+    output z
+);
+
+    assign z = ~(x ^ y);
+
+endmodule
